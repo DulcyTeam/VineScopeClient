@@ -11,15 +11,26 @@
 
     <!-- VineScope references -->
     <link href="/css/default.css" rel="stylesheet" />
-    <script src="js/data.js"></script>    
+    <script src="js/data.js"></script>   
+    <script src="pages/searchresults/searchResults.js"></script> 
     <script src="/js/httpRequester.js"></script>
     <script src="/js/default.js"></script>
     <script src="/js/navigator.js"></script>
 </head>
 <body>
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
-    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
-        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
-    </div> -->
+    <div id="appBar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+        <button data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{id:'cmdFbLogin',label:'Facebook Login',icon:'globe',section:'global',tooltip:'Login with Facebook'}">
+        </button>
+        <hr data-win-control="WinJS.UI.AppBarCommand" data-win-options="{type:'separator',section:'global'}" />
+        <button data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{id:'cmdDownload',label:'Download vine',icon:'download',section:'global',tooltip:'Download video'}">
+        </button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRandom',label:'Get random vine'
+            ,icon:'shuffle',section:'global',tooltip:'Shuffle'}">
+        </button>
+    </div>
+
 </body>
 </html>
