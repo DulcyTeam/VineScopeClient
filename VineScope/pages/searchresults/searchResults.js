@@ -11,11 +11,10 @@
     var nav = WinJS.Navigation;
     var ui = WinJS.UI;
     var utils = WinJS.Utilities;
-    var searchPageURI = "/pages/searchresults/searchResults.html";
     var searchPageURI = "/pages/searchresults/searchresults.html";
     var searchPane = appModel.Search.SearchPane.getForCurrentView();
 
-    searchPane.placeholderText = "Search for a computer";
+    searchPane.placeholderText = "Search for a vine";
     searchPane.showOnKeyboardInput = true;
 
     ui.Pages.define(searchPageURI, {
