@@ -15,7 +15,8 @@
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize
                 // your application here.
-            } else {
+            }
+            else {
                 // TODO: This application has been reactivated from suspension.
                 // Restore application state here.
             }
@@ -29,19 +30,24 @@
                 HttpRequester.getJson(url + "all").then(
                     function complete(response) {
                         vines = JSON.parse(response.responseText);
-                        console.log(vines[0]);
                         Data.vines = new WinJS.Binding.List(vines);
                     }, function error(response) {
-
                     }).done(function () {
                         if (nav.location) {
                             nav.history.current.initialPlaceholder = true;
                             return nav.navigate(nav.location, nav.state);
-                        } else {
+                        }
+                        else {
                             return nav.navigate(Application.navigator.home);
                         }
                     });
             }));
+
+            var featuredVideos = WinJS.Utilities.id("featured-videos");
+            featuredVideos.listen("click", function () {
+                var target = this.target;
+                console.log(target);
+            });
         }
     });
 

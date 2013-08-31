@@ -25,18 +25,12 @@
 
             <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
                 <div>
-<!--                    <label id="author" for="content" data-win-bind="innerText: Author ">Unknown</label>
-                    <span>: </span>
-                    <span id="content" data-win-bind="innerText: Content">Unknown</span>-->
-                    <img data-win-bind="src: posterUrl" width="100" height="100"/>
+                    <img src="#" alt="Vine" data-url="#" data-win-bind="src: posterUrl; alt: url" width="100" height="100" />
                 </div>
             </div>
 
             <section aria-label="Main content" role="main">
-                <div id="index-vide">
-                    <img src="#" alt="Alternate Text" />
-                </div>
-                <div id="featured-videos" 
+                <div id="featured-videos"
                      data-win-control="WinJS.UI.ListView"
                      data-win-options="{itemDataSource : Data.vines.dataSource,
                      itemTemplate: select('#mediumListIconTextTemplate'),

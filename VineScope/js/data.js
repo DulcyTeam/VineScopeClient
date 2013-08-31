@@ -2,7 +2,7 @@
 (function () {
     "use strict";
 
-    var vines = new WinJS.Binding.List([{ pesho: "pesho" }]);
+    var vines = new WinJS.Binding.List([{}]);
 
     WinJS.Namespace.define("Data", {
         vines: vines,
