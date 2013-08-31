@@ -2,5 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ReferenceCachePath>C:\Users\d.georgiev.91\AppData\Local\Temp\dcbilln3_VineScope_refcache</ReferenceCachePath>
+    <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
 </Project>
