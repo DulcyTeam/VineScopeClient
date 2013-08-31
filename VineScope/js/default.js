@@ -48,7 +48,6 @@
                 var target = this.target;
                 console.log(target);
             });
-            };
             
             var fbLogin = document.getElementById("cmdFbLogin").winControl
 
@@ -56,7 +55,6 @@
 
             var facebookLogin = function () {
             };
-
 
             WinJS.Utilities.id("cmdDownload").listen("click", function () {
                 var currentState = Windows.UI.ViewManagement.ApplicationView.value;
@@ -71,7 +69,6 @@
                 savePicker.suggestedFileName = "New Video";
                 savePicker.pickSaveFileAsync().then(function (file) {
                     if (file) {
-
                         Windows.Storage.CachedFileManager.deferUpdates(file);
        
                         Windows.Storage.FileIO.w(file, file.name).done(function () {
@@ -80,12 +77,14 @@
                             Windows.Storage.CachedFileManager.completeUpdatesAsync(file).done(function (updateStatus) {
                                 if (updateStatus === Windows.Storage.Provider.FileUpdateStatus.complete) {
                                     WinJS.log && WinJS.log("File " + file.name + " was saved.", "sample", "status");
-                                } else {
+                                } 
+                                else {
                                     WinJS.log && WinJS.log("File " + file.name + " couldn't be saved.", "sample", "status");
                                 }
                             });
                         });
-                    } else {
+                    } 
+                    else {
                         WinJS.log && WinJS.log("Operation cancelled.", "sample", "status");
                     }
                 });
