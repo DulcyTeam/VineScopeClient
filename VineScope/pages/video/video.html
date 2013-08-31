@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>video</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="video.css" rel="stylesheet" />
+    <script src="video.js"></script>
+</head>
+<body>
+    <div class="video fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle" id="video-title" style="position: relative; left: 121.39px; top: -4.97px; width: 504.17px;">Some very cool video</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <video controls="controls">
+                <source src="file.mp4" type="video/mp4" />
+            </video>
+        </section>
+    </div>
+    <span id="author" style="position: relative; left: 123px; top: 12px;">Somebody name</span>
+	<button type="button" style="position: relative; width: 90px; height: 32px; left: 216px; top: 9px;">Download</button><span style="width: 209.44px; height: 138px;"></span>
+</body>
+</html>
