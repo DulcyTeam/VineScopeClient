@@ -66,6 +66,9 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
+    <Content Include="pages\searchresults\searchResults.css" />
+    <Content Include="pages\searchresults\searchResults.html" />
+    <Content Include="pages\searchresults\searchResults.js" />
     <Content Include="pages\video\video.css" />
     <Content Include="pages\video\video.html" />
     <Content Include="pages\video\video.js" />
