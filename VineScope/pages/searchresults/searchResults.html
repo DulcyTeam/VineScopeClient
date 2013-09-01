@@ -12,12 +12,14 @@
 
     <link href="/css/default.css" rel="stylesheet" />
     <link href="/pages/searchresults/searchResults.css" rel="stylesheet" />
-    <script src="/js/data.js"></script>
+    <script src="../../js/datalayer.js"></script>
+    <script src="../../js/viewmodels.js"></script>
+    <script src="searchResults.js"></script>
 </head>
 <body>
     <!-- This template is used to display each item in the ListView declared
          below. -->
-    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+    <!--<div class="itemtemplate" data-win-control="WinJS.Binding.Template">
         <div class="item">
             <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
             <div class="item-content">
@@ -28,7 +30,6 @@
         </div>
     </div>
 
-    <!-- The content that will be loaded and displayed. -->
     <div class="searchResults fragment">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
@@ -44,6 +45,35 @@
                 <select class="filterselect"></select>
             </div>
             <div class="resultslist win-selectionstylefilled" aria-label="Search results" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
+        </section>
+    </div>-->
+
+    <!-- This template is used to display each item in the ListView declared
+         below. -->
+    <div id="search-item-template" class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div >
+            <h3 data-win-bind="innerText: title">Computer name</h3>
+            <h4 data-win-bind="innerText: author"></h4>
+            <img src="#" data-win-bind="src: posterUrl"/>
+        </div>
+    </div>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="searchresults fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <div class="titlearea">
+                <h1 class="pagetitle win-type-ellipsis">Search Results for: <span data-win-bind="innerText: searchQuery.queryText"></span></h1>
+                <h2 class="pagesubtitle win-type-ellipsis"></h2>
+            </div>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div data-win-control="WinJS.UI.ListView"
+                data-win-options="{
+                    itemTemplate: select('#search-item-template'),
+                    itemDataSource: ViewModels.vinesList.dataSource
+                }">
+            </div>
         </section>
     </div>
 </body>
