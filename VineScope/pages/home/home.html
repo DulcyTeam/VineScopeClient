@@ -11,6 +11,7 @@
 
         <link href="/css/default.css" rel="stylesheet" />
         <link href="/pages/home/home.css" rel="stylesheet" />
+        <script src="homecodebehind.js"></script>
         <script src="/pages/home/home.js"></script>
     </head>
     <body>
@@ -25,14 +26,14 @@
 
             <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
                 <div>
-                    <img src="#" alt="Vine" data-url="#" data-win-bind="src: posterUrl; alt: url" width="100" height="100" />
+                    <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/16261_695651730450181_1722960795_n.jpg" alt="Vine" data-url="#" data-win-bind="src: posterUrl; alt: url" width="100" height="100" />
                 </div>
             </div>
 
             <section aria-label="Main content" role="main">
                 <div id="featured-videos"
                      data-win-control="WinJS.UI.ListView"
-                     data-win-options="{itemDataSource : Data.vines.dataSource,
+                     data-win-options="{itemDataSource : ViewModels.vines.dataSource,
                      itemTemplate: select('#mediumListIconTextTemplate'),
                      layout : {type: WinJS.UI.GridLayout}}">
                 </div>

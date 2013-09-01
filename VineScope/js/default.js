@@ -8,7 +8,6 @@
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
     var nav = WinJS.Navigation;
-    var url = "http://vinescopecustomservices.apphb.com/api/vines/";
 
     app.addEventListener("activated", function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
@@ -26,28 +25,14 @@
             }
 
             args.setPromise(WinJS.UI.processAll().then(function () {
-                var vines;
-                HttpRequester.getJson(url + "all").then(
-                    function complete(response) {
-                        vines = JSON.parse(response.responseText);
-                        Data.vines = new WinJS.Binding.List(vines);
-                    }, function error(response) {
-                    }).done(function () {
-                        if (nav.location) {
-                            nav.history.current.initialPlaceholder = true;
-                            return nav.navigate(nav.location, nav.state);
-                        }
-                        else {
-                            return nav.navigate(Application.navigator.home);
-                        }
-                    });
+                if (nav.location) {
+                    nav.history.current.initialPlaceholder = true;
+                    return nav.navigate(nav.location, nav.state);
+                }
+                else {
+                    return nav.navigate(Application.navigator.home);
+                }
             }));
-
-            var featuredVideos = WinJS.Utilities.id("featured-videos");
-            featuredVideos.listen("click", function () {
-                var target = this.target;
-                console.log(target);
-            });
             
             var fbLogin = document.getElementById("cmdFbLogin").winControl
 
