@@ -35,7 +35,9 @@
                      data-win-control="WinJS.UI.ListView"
                      data-win-options="{itemDataSource : ViewModels.vines.dataSource,
                      itemTemplate: select('#mediumListIconTextTemplate'),
-                     layout : {type: WinJS.UI.GridLayout}}">
+                     layout : {type: WinJS.UI.GridLayout},
+                     selectionMode: 'none',
+                     oniteminvoked: HomeCodeBehind.goToVinePage}">
                 </div>
             </section>
         </div>
