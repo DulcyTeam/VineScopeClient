@@ -24,6 +24,7 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
     var loadVines = function () {
         var vinesDTOs = Data.getVines().then(function (vinesDTOs) {
             vinesList.splice(0, vinesList.length);
+
             for (var i = 0; i < vinesDTOs.length; i++) {
                 vinesList.push(vinesDTOs[i]);
             }
