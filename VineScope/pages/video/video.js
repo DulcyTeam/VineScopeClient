@@ -13,7 +13,6 @@
         ready: function (element, options) {
             // TODO: Initialize the page here.
             var vine;
-            if (options.indexInVinesList>=0) {
 
             if (options.indexInVinesList >= 0) {
                 var vineIndex = options.indexInVinesList;
