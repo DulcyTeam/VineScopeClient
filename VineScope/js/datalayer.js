@@ -28,8 +28,22 @@
         });
     };
 
+    var getVine = function (vineUrl) {
+        var vine = {};
+
+        return HttpRequester.getJson(url + "vine?url=" + vineUrl).then(function (response) {
+            var jsonResponse = response.responseText;
+            vine = JSON.parse(jsonResponse);
+            return vine;
+        }, function error(response) {
+            var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
+            errorMessage.showAsync()
+        });
+    }
+
     WinJS.Namespace.define("Data", {
         getVines: getVines,
-        searchVines: searchVines
+getVine: getVine
+searchVines: searchVines
     });
 })()

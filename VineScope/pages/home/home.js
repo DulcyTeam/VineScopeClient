@@ -6,10 +6,11 @@
         // populates the page elements with the app's data.
 
         init: function (element, options) {
-            HomeCodeBehind.callLoadVines();
+            
         },
 
         ready: function (element, options) {
+            HomeCodeBehind.callLoadVines();
         }
     });
 })();

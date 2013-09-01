@@ -1,17 +1,19 @@
 ﻿(function () {
     "use strict";
 
-    var goToComputerDetailsPage = function (invokeEvent) {
-        WinJS.Navigation.navigate("/pages/computerdetails/computerdetails.html", {
-            indexInComputersList: invokeEvent.detail.itemIndex
+    var goToVinePage = function (invokeEvent) {
+        WinJS.Navigation.navigate("/pages/video/video.html", {
+            indexInVinesList: invokeEvent.detail.itemIndex
         });
     }
 
-    WinJS.Utilities.markSupportedForProcessing(goToComputerDetailsPage);
+    WinJS.Utilities.markSupportedForProcessing(goToVinePage);
 
     WinJS.Namespace.define("HomeCodeBehind", {
         callLoadVines: function () {
             ViewModels.loadVines();
         },
+
+        goToVinePage: goToVinePage
     })
 })();
