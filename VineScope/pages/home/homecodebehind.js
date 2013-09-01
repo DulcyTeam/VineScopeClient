@@ -3,7 +3,7 @@
 
     var goToVinePage = function (invokeEvent) {
         WinJS.Navigation.navigate("/pages/video/video.html", {
-            indexInComputersList: invokeEvent.detail.itemIndex
+            indexInVinesList: invokeEvent.detail.itemIndex
         });
     }
 
