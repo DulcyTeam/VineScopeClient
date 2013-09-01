@@ -35,6 +35,10 @@
                 }
             }));
 
+            WinJS.Utilities.id("cmdHome").listen("click", function () {
+                nav.navigate("/pages/home/home.html");
+            });
+
             WinJS.Utilities.id("cmdRandom").listen("click", function () {
                 DefaultCodeBehind.goToRandomVine();
             });

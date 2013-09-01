@@ -14,7 +14,7 @@
         ready: function (element, options) {
             // TODO: Initialize the page here.
             var vine;
-            if (options.indexInVinesList) {
+            if (options.indexInVinesList>=0) {
                 var vineIndex = options.indexInVinesList;
                 vine = ViewModels.vines.getAt(vineIndex);
             } else {
@@ -25,7 +25,7 @@
         },
 
         unload: function () {
-            ViewModels.vine = ViewModels.vineModel();
+            // ViewModels.vine = ViewModels.vineModel();
         },
 
         updateLayout: function (element, viewState, lastViewState) {
