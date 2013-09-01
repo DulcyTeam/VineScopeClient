@@ -43,7 +43,10 @@
 
     WinJS.Namespace.define("Data", {
         getVines: getVines,
-        getVine: getVine,
+<<<<<<< HEAD
         searchVines: searchVines
+=======
+        getVine: getVine
+>>>>>>> cab9a4b09e1da58ccb632e2ec652d23451b04811
     });
 })()

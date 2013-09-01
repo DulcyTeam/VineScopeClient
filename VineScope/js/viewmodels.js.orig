@@ -1,9 +1,10 @@
 ﻿/// <reference path="//Microsoft.WinJS.1.0/js/ui.js" />
 
-    var url = "http://vinescopecustomservices.apphb.com/api/vines/";
 (function () {
     var vinesList = new WinJS.Binding.List([]);
+<<<<<<< HEAD
     var searchResults = new WinJS.Binding.List([]);
+=======
     var vine = new WinJS.Binding.as({
         previousVineUrl: "",
         nextVineUrl: "",
@@ -14,6 +15,7 @@
         posterUrl: "",
         author: "",
     });
+>>>>>>> cab9a4b09e1da58ccb632e2ec652d23451b04811
 
     var loadVines = function () {
         var vinesDTOs = Data.getVines().then(function (vinesDTOs) {
