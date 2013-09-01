@@ -24,6 +24,8 @@
         }).done();
     }
 
+    var searchQuery = WinJS.Binding.as({ queryString: ""});
+
     var loadVine = function (vineUrl) {
         var vineDTO = Data.getVine(vineUrl).then(function (vineDTO) {
             vine.previousVineUrl = vineDTO.previousVineUrl;
@@ -38,8 +40,8 @@
         }).done();
     }
 
-    var loadFoundVines = function () {
-        var vinesDTOs = Data.getVines().then(function (vinesDTOs) {;
+    var loadFoundVines = function (queryString) {
+        var vinesDTOs = Data.searchVines(queryString).then(function (vinesDTOs) {;
             vinesList.splice(0, vinesList.length);
             for (var i = 0; i < vinesDTOs.length; i++) {
                 vinesList.push(vinesDTOs[i]);

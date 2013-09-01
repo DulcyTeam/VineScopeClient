@@ -9,8 +9,6 @@
         // populates the page elements with the app's data.
         init: function (element, options) {
            
-
-            
         },
 
         ready: function (element, options) {

@@ -19,7 +19,8 @@
 
     ui.Pages.define(searchPageURI, {
         ready: function (element, options) {
-            WinJS.Binding.processAll(element, Data);    
+            //ViewModels.loadFoundVines();
+            WinJS.Binding.processAll(element, ViewModels);
         }
     });
 
