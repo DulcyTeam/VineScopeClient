@@ -1,13 +1,17 @@
-﻿(function () {
+﻿/// <reference path="datalayer.js" />
+(function () {
     "use strict";
 
-    var goToAddComputer = function () {
-        WinJS.Navigation.navigate("/pages/addcomputer/addcomputer.html");
+    var goToRandomVine = function () {
+        var vine = Data.getRandomVine().then(
+            function (vine) {
+                WinJS.Navigation.navigate("/pages/video/video.html", vine)
+            });
     }
 
-    WinJS.Utilities.markSupportedForProcessing(goToAddComputer);
+    WinJS.Utilities.markSupportedForProcessing(goToRandomVine);
 
     WinJS.Namespace.define("DefaultCodeBehind", {
-        goToAddComputer: goToAddComputer
+        goToRandomVine: goToRandomVine
     });
 })()

@@ -1,4 +1,5 @@
-﻿// For an introduction to the Navigation template, see the following documentation:
+﻿/// <reference path="defaultcodebehind.js" />
+// For an introduction to the Navigation template, see the following documentation:
 // http://go.microsoft.com/fwlink/?LinkId=232506
 (function () {
     "use strict";
@@ -33,13 +34,10 @@
                     return nav.navigate(Application.navigator.home);
                 }
             }));
-            
-            var fbLogin = document.getElementById("cmdFbLogin").winControl
 
-            fbLogin.addEventListener("click", facebookLogin);
-
-            var facebookLogin = function () {
-            };
+            WinJS.Utilities.id("cmdRandom").listen("click", function () {
+                DefaultCodeBehind.goToRandomVine();
+            });
 
             WinJS.Utilities.id("cmdDownload").listen("click", function () {
                 var currentState = Windows.UI.ViewManagement.ApplicationView.value;
@@ -57,8 +55,6 @@
                         Windows.Storage.CachedFileManager.deferUpdates(file);
        
                         Windows.Storage.FileIO.w(file, file.name).done(function () {
-                            // Let Windows know that we're finished changing the file so the other app can update the remote version of the file.
-                            // Completing updates may require Windows to ask for user input.
                             Windows.Storage.CachedFileManager.completeUpdatesAsync(file).done(function (updateStatus) {
                                 if (updateStatus === Windows.Storage.Provider.FileUpdateStatus.complete) {
                                     WinJS.log && WinJS.log("File " + file.name + " was saved.", "sample", "status");

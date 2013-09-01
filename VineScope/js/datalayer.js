@@ -41,9 +41,23 @@
         });
     }
 
+    var getRandomVine = function () {
+        var vine = {};
+
+        return HttpRequester.getJson(url + "random").then(function (response) {
+            var jsonResponse = response.responseText;
+            vine = JSON.parse(jsonResponse);
+            return vine;
+        }, function error(response) {
+            var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
+            errorMessage.showAsync()
+        });
+    };
+
     WinJS.Namespace.define("Data", {
         getVines: getVines,
         getVine: getVine,
-        searchVines: searchVines
+        searchVines: searchVines,
+        getRandomVine: getRandomVine
     });
 })()

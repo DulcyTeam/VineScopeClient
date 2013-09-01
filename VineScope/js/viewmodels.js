@@ -6,16 +6,20 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
     var vinesList = new WinJS.Binding.List([]);
     var searchResults = new WinJS.Binding.List([]);
 
-    var vine = new WinJS.Binding.as({
-        previousVineUrl: "",
-        nextVineUrl: "",
-        videoUrl: "",
-        addedBefore: "",
-        title: "",
-        url: "",
-        posterUrl: "",
-        author: "",
-    });
+    var vineModel = function () {
+        return WinJS.Binding.as({
+            previousVineUrl: "",
+            nextVineUrl: "",
+            videoUrl: "",
+            addedBefore: "",
+            title: "",
+            url: "",
+            posterUrl: "",
+            author: "",
+        })
+    }
+
+    var vine = vineModel();
 
     var loadVines = function () {
         var vinesDTOs = Data.getVines().then(function (vinesDTOs) {
@@ -61,6 +65,7 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
         vines: vinesList,
         searchResults: searchResults,
         getSearchResultsFor: getSearchResultsFor,
-        searchQuery: searchQuery
+        searchQuery: searchQuery,
+        vineModel: vineModel
     });
 })();

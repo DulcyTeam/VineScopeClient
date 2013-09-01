@@ -8,19 +8,24 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         init: function (element, options) {
-           
+
         },
 
         ready: function (element, options) {
             // TODO: Initialize the page here.
-            var vineIndex = options.indexInVinesList;
-            var vine = ViewModels.vines.getAt(vineIndex);
+            var vine;
+            if (options.indexInVinesList) {
+                var vineIndex = options.indexInVinesList;
+                vine = ViewModels.vines.getAt(vineIndex);
+            } else {
+                vine = options;
+            }
             ViewModels.loadVine(vine.url);
             WinJS.Binding.processAll(element, ViewModels);
         },
 
         unload: function () {
-            // TODO: Respond to navigations away from this page.
+            ViewModels.vine = ViewModels.vineModel();
         },
 
         updateLayout: function (element, viewState, lastViewState) {
