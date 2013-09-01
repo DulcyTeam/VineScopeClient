@@ -61,7 +61,7 @@
     <Content Include="js\datalayer.js" />
     <Content Include="js\default.js" />
     <Content Include="js\defaultcodebehind.js" />
-    <Content Include="js\httpRequester.js" />
+    <Content Include="js\httprequester.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\viewmodels.js" />
     <Content Include="pages\home\homecodebehind.js" />
@@ -69,9 +69,10 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
-    <Content Include="pages\searchresults\searchResults.css" />
-    <Content Include="pages\searchresults\searchResults.html" />
-    <Content Include="pages\searchresults\searchResults.js" />
+    <Content Include="pages\searchresults\searchresults.css" />
+    <Content Include="pages\searchresults\searchresults.html" />
+    <Content Include="pages\searchresults\searchresults.js" />
+    <Content Include="pages\searchresults\searchresutscodebehind.js" />
     <Content Include="pages\video\video.css" />
     <Content Include="pages\video\video.html" />
     <Content Include="pages\video\video.js" />

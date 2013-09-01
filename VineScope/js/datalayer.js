@@ -23,7 +23,7 @@
             found = JSON.parse(jsonResponse);
             return found;
         }, function error(response) {
-            var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
+            var errorMessage = new Windows.UI.Popups.MessageDialog("No results were found");
             errorMessage.showAsync();
         });
     };

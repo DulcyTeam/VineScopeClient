@@ -1,15 +1,17 @@
 ﻿/// <reference path="//Microsoft.WinJS.1.0/js/ui.js" />
 
-    var url = "http://vinescopecustomservices.apphb.com/api/vines/";
+var url = "http://vinescopecustomservices.apphb.com/api/vines/";
+
 (function () {
     var vinesList = new WinJS.Binding.List([]);
     var searchResults = new WinJS.Binding.List([]);
+
     var vine = new WinJS.Binding.as({
         previousVineUrl: "",
         nextVineUrl: "",
         videoUrl: "",
         addedBefore: "",
-        title: "Pesho",
+        title: "",
         url: "",
         posterUrl: "",
         author: "",
@@ -34,15 +36,20 @@
             vine.url = vineDTO.url;
             vine.posterUrl = vineDTO.posterUrl;
             vine.author = vineDTO.author;
-        var a = 5;
         }).done();
     }
 
-    var loadFoundVines = function () {
-        var vinesDTOs = Data.getVines().then(function (vinesDTOs) {;
+    var searchQuery = WinJS.Binding.as({ queryText: ""});
+
+    var getSearchResultsFor = function (queryString) {
+        searchQuery.queryText = queryString;
+
+        var vinesDTOs = Data.searchVines(queryString).then(function (vinesDTOs) {
             vinesList.splice(0, vinesList.length);
+
             for (var i = 0; i < vinesDTOs.length; i++) {
-                vinesList.push(vinesDTOs[i]);
+                var vineDTO = vinesDTOs[i];
+                vinesList.push(vineDTO);
             }
         });
     }
@@ -53,6 +60,7 @@
         vine: vine,
         vines: vinesList,
         searchResults: searchResults,
-        loadFoundVines: loadFoundVines
+        getSearchResultsFor: getSearchResultsFor,
+        searchQuery: searchQuery
     });
 })();

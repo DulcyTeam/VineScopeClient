@@ -19,7 +19,8 @@
 
     ui.Pages.define(searchPageURI, {
         ready: function (element, options) {
-            WinJS.Binding.processAll(element, Data);    
+            ViewModels.getSearchResultsFor(options.queryText);
+            WinJS.Binding.processAll(element, ViewModels);    
         }
     });
 
@@ -35,5 +36,7 @@
         }
     });
 
-    appModel.Search.SearchPane.getForCurrentView().onquerysubmitted = function (args) { nav.navigate(searchPageURI, args); };
+    appModel.Search.SearchPane.getForCurrentView().onquerysubmitted = function (args) {
+        nav.navigate(searchPageURI, args);
+    };
 })();
