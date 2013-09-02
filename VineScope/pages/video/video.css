@@ -16,3 +16,52 @@
         margin-right: 100px;
     }
 }
+
+
+video {
+    border:1px solid black;
+    margin-top: 12%;
+    position: relative; 
+    width: 700px; 
+    height: 400px;
+}
+
+.video fragment {
+    width:100%;
+    position:relative;
+    margin-right:5%;
+}
+
+#prev {
+    margin-left:5%;
+    position:relative;
+    border:none;
+    height:405px;
+    width: 90px;
+    left: -1.3px;
+    top: -195.89px;
+    
+}
+
+    #prev > img, #next > img {
+        vertical-align:middle;
+    }
+
+img:hover {
+    text-decoration:none;
+}
+
+#next {
+    position:relative;
+    margin-right:5%;
+    border:none;
+    height:405px;
+    width: 90px;
+    left: -1.3px;
+    top: -195.89px;
+}
+
+h1 {
+    padding-top:10px;
+    font-size: 30px;
+}
