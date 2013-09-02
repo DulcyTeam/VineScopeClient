@@ -76,6 +76,10 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
         searchResults: searchResults,
         getSearchResultsFor: getSearchResultsFor,
         searchQuery: searchQuery,
+<<<<<<< HEAD
+        vineViewModel: vineViewModel
+=======
         vineModel: vineViewModel
+>>>>>>> origin/master
     });
 })();

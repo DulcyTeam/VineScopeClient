@@ -3,16 +3,25 @@
     "use strict";
 
     var goToRandomVine = function () {
+<<<<<<< HEAD
+        var vine = Data.getRandomVine().then(
+            function (vine) {
+                var currentPage = WinJS.Navigation.location
+                if (currentPage) {
+                    WinJS.Navigation.navigate("/pages/video/video.html", vine)
+                } else {
+    
+                }
+            });
+=======
         var vine = Data.getRandomVine().then(function (vine) {
             if (WinJS.Navigation.location == "/pages/video/video.html") {
                 ViewModels.loadVine(vine.url);
             } else {
-                    WinJS.Navigation.navigate("/pages/video/video.html", vine)
                 WinJS.Navigation.navigate("/pages/video/video.html", vine)
             }
-    
-                }
         });
+>>>>>>> origin/master
     }
 
     WinJS.Utilities.markSupportedForProcessing(goToRandomVine);
