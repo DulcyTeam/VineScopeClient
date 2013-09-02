@@ -13,24 +13,24 @@
         <script src="video.js"></script>
     </head>
     <body>
-        <div class="video fragment">
-            <header aria-label="Header content" role="banner">
+        <div class="video fragment" style="position: relative; left: 10px; top: 80px;">
+            <header aria-label="Header content" role="banner" style="position: relative; left: 0px; top: -70px;">
                 <button class="win-backbutton" aria-label="Back" type="button"></button>
-                <h1 class="titlearea win-type-ellipsis">
+                <h1 class="titlearea win-type-ellipsis": style="margin-bottom:20px" >
                     <span 
                         class="pagetitle" id="video-title" 
-                        style="position: relative; left: 121.39px; top: -4.97px; width: 504.17px;"
+                        style="position: relative; left: 275.83px; top: -22.17px; width: 504.17px;"
                         data-win-bind="innerText: vine.title"> Some very cool video </span>
                 </h1>
             </header>
-            <section aria-label="Main content" role="main">
-                <video id="player" poster="#" data-win-bind="poster: vine.posterUrl; src: vine.videoUrl" controls="controls">
+            <section aria-label="Main content" role="main" style="position: relative; width: 815px; height: 445.93px; left: 130px; top: -14.93px;">
+                <video id="player" poster="#" data-win-bind="poster: vine.posterUrl; src: vine.videoUrl" controls="controls" style="width: 100%; height: 100%; position: relative; left: 0px; top: 35px; margin: 0px;">
                    
                 </video>
-                <span id="author" 
+                <div id="author" 
                       style="position: relative; 
-                      left: 123px; top: 12px;" data-win-bind="innerText: vine.author"> Somebody name </span>
-                <button id="download-vine-bnt">Download Vine</button>
+                      left: 0px; top: 46.07px;" data-win-bind="innerText: vine.author"> Somebody name </div>
+                <button id="download-vine-bnt" style="position: relative; width: 125.35px; height: 32px; left: -0.35px; top: 61.07px;">Download Vine</button>
             </section>
         </div>
     </body>

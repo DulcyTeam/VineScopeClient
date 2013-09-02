@@ -34,7 +34,7 @@
             }
 
     .fragment section[role=main] {
-        -ms-grid-row: 2;
+        -ms-grid-row: 1;
         height: 100%;
         width: 100%;
     }
