@@ -20,7 +20,8 @@
     ui.Pages.define(searchPageURI, {
         ready: function (element, options) {
             ViewModels.getSearchResultsFor(options.queryText);
-            WinJS.Binding.processAll(element, ViewModels);    
+            WinJS.Binding.processAll(element, ViewModels);
+            WinJS.UI.processAll();
         }
     });
 

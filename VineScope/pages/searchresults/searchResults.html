@@ -11,7 +11,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="/css/default.css" rel="stylesheet" />
-    <link href="/pages/searchresults/searchResults.css" rel="stylesheet" />
+    <link href="searchresults.css" rel="stylesheet" />
     <script src="searchresutscodebehind.js"></script>
     <script src="searchresults.js"></script>
 </head>
@@ -19,10 +19,10 @@
     <!-- This template is used to display each item in the ListView declared
          below. -->
     <div id="search-item-template" class="itemtemplate" data-win-control="WinJS.Binding.Template">
-        <div >
+        <div id="item">
             <h3 data-win-bind="innerText: title">Computer name</h3>
+            <img id="searchedVideo" src="#" data-win-bind="src: posterUrl" width="150" height="150"/>
             <h4 data-win-bind="innerText: author"></h4>
-            <img src="#" data-win-bind="src: posterUrl" width="150" height="150"/>
         </div>
     </div>
 
@@ -33,18 +33,18 @@
             <div class="titlearea">
                 <h1 class="pagetitle win-type-ellipsis">Search Results for: 
                     <span data-win-bind="innerText: searchQuery.queryText"></span>
-
                 </h1>
                 <h2 class="pagesubtitle win-type-ellipsis"></h2>
             </div>
         </header>
         <section aria-label="Main content" role="main">
-            <div data-win-control="WinJS.UI.ListView"
+            <div id="#resultsContainer" class="win-horizontal" data-win-control="WinJS.UI.ListView" 
                 data-win-options="{
                     itemTemplate: select('#search-item-template'),
                     itemDataSource: ViewModels.vines.dataSource,
                     selectionMode: 'none',
-                    oniteminvoked: SearchResultsCodeBehind.goToVinePage }">
+                    oniteminvoked: SearchResultsCodeBehind.goToVinePage
+                 }">
             </div>
         </section>
     </div>
