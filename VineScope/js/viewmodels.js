@@ -31,8 +31,7 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
                 vinesList.push(vinesDTOs[i]);
             }
         }, function error(response) {
-            //var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
-            //errorMessage.showAsync();
+
             var problemContainer = document.getElementById("problem-reporter");
             var h2 = document.createElement("h2");
             h2.innerText = "Something happened, there is a problem with the connection";
@@ -62,7 +61,7 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
         searchQuery.queryText = queryString;
 
         var vinesDTOs = Data.searchVines(queryString).then(function (vinesDTOs) {
-            vinesList.splice(0, vinesList.length);
+            searchResults.splice(0, searchResults.length);
 
             if (!vinesDTOs) {
                 return;
@@ -70,7 +69,7 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
 
             for (var i = 0; i < vinesDTOs.length; i++) {
                 var vineDTO = vinesDTOs[i];
-                vinesList.push(vineDTO);
+                searchResults.push(vineDTO);
             }
         });
     }
