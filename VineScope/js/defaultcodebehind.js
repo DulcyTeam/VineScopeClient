@@ -3,10 +3,13 @@
     "use strict";
 
     var goToRandomVine = function () {
-        var vine = Data.getRandomVine().then(
-            function (vine) {
+        var vine = Data.getRandomVine().then(function (vine) {
+            if (WinJS.Navigation.location == "/pages/video/video.html") {
+                ViewModels.loadVine(vine.url);
+            } else {
                 WinJS.Navigation.navigate("/pages/video/video.html", vine)
-            });
+            }
+        });
     }
 
     WinJS.Utilities.markSupportedForProcessing(goToRandomVine);
