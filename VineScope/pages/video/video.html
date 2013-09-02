@@ -13,27 +13,24 @@
         <script src="video.js"></script>
     </head>
     <body>
-        <div class="video fragment" style="position: relative; left: 0px; top: 0px; height: 765px; width: 1361px;">
-            <header aria-label="Header content" role="banner" style="position: relative; left: 0px; top: -70px;">
+        <div class="video fragment">
+            <header aria-label="Header content" role="banner" id="mainHeader">
                 <button class="win-backbutton" aria-label="Back" type="button"></button>
-                <h1 class="titlearea win-type-ellipsis": style="margin-bottom:20px; position: relative; left: 1px; top: 20.07px; height: 100px;" >
+                <h1 class="titlearea win-type-ellipsis" style="width: 1210px;" >
                     <span 
                         class="pagetitle" id="video-title" 
-                        style="position: relative; left: 379.83px; top: 17.76px; width: 504.17px; height: 65px;"
-                        data-win-bind="innerText: vine.title"> Some very cool video </span>
+                        data-win-bind="innerText: vine.title" style="position: relative; left: 165px; top: 7.31px;"> Some very cool video </span>
                 </h1>
             </header>
-            <section aria-label="Main content" role="main" style="position: relative; width: 1055px; height: 469.93px; left: 50px; top: 5.14px;">
+            <section aria-label="Main content" role="main">
                 <button class="nav-btn" id="prev">
-                    <img src="../../images/prev-btn.png" />
+                    <img src="../../images/prev-btn.png" style="position: relative;"/>
                 </button>
                 <video id="vine-player" poster="#" data-win-bind="poster: vine.posterUrl; src: vine.videoUrl" controls="controls">
                 </video>
-                <button id="next"class="nav-btn"><img src="../../images/next-btn.png" /></button>
-                <div id="author" 
-                      style="position: relative; 
-                      left: 20px; top: 255.07px;" data-win-bind="innerText: vine.author"> Somebody name </div>
-                <button id="download-vine-bnt" style="position: relative; width: 125.35px; height: 32px; left: -0.35px; top: 61.07px;">
+                <button class="nav-btn" id="next"><img src="../../images/next-btn.png" style="position: relative; left: -1.62px; top: -2.5px;"/></button>
+                <span id="by" style="position: relative; left: -857.53px; top: 34.27px;"><strong>by</strong></span><span id="author" data-win-bind="innerText: vine.author" style="width: 1085px; height: 803.93px; position: relative; left: -855px; top: 33.77px;"> Somebody name </span>
+                <button id="download-vine-bnt" style="position: relative; left: -700px; top: 34.27px;">
                     Download Vine
                 </button>
             </section>
