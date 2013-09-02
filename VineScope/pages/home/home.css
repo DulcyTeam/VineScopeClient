@@ -3,6 +3,11 @@
     margin-right: 211px;
 }
 
+#banner {
+    margin: 10px -4px 630px 4px; 
+    -ms-grid-row-span: 2;
+}
+
 @media screen and (-ms-view-state: snapped) {
     .homepage section[role=main] {
         margin-left: 20px;
