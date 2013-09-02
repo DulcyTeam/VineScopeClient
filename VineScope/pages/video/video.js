@@ -12,7 +12,7 @@
 
         ready: function (element, options) {
             // TODO: Initialize the page here.
-            var vine;
+            var vine = {};
 
             if (options.indexInVinesList >= 0) {
                 var vineIndex = options.indexInVinesList;
@@ -23,8 +23,10 @@
 
             ViewModels.loadVine(vine.url);
             WinJS.Binding.processAll(element, ViewModels);
+
             var downloadButton = document.getElementById("download-vine-bnt");
             downloadButton.addEventListener("click", downloadVineOnClick);
+            WinJS.Binding.processAll(element, ViewModels);
         },
 
         unload: function () {
@@ -65,7 +67,8 @@
                     });
                 }, function () {
                     var failMessage = new Windows.UI.Popups.MessageDialog("Download failed.");
-                    failMessage.showAsync()
+                    failMessage.showAsync();
+                    file.deleteAsync();
                 }).done();
             }
             else {

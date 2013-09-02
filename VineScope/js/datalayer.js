@@ -1,4 +1,5 @@
 ﻿(function () {
+    "use stict";
 
     var url = "http://vinescopecustomservices.apphb.com/api/vines/";
 

@@ -3,6 +3,8 @@
 var url = "http://vinescopecustomservices.apphb.com/api/vines/";
 
 (function () {
+    "use strict";
+
     var vinesList = new WinJS.Binding.List([]);
     var searchResults = new WinJS.Binding.List([]);
 
