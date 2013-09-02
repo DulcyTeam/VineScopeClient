@@ -8,7 +8,6 @@
                 ViewModels.loadVine(vine.url);
             } else {
                 WinJS.Navigation.navigate("/pages/video/video.html", vine)
-               
             }
         });
     }

@@ -57,6 +57,9 @@
     <Content Include="images\logo.png" />
     <Content Include="images\next-btn.png" />
     <Content Include="images\prev-btn.png" />
+    <Content Include="images\sad-face.gif" />
+    <Content Include="images\sad-gooby.png" />
+    <Content Include="images\sad-panda.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />

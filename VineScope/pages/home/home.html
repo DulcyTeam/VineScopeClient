@@ -22,16 +22,18 @@
                 <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
                 <h1 class="titlearea win-type-ellipsis">
                     <span class="pagetitle" style="position: relative; left: 145px; top: -19.24px;">Welcome to VineScope!</span>
-                </h1>   
+                </h1>
             </header>
             <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
                 <div style="width: 270px; height: 190px">
                     <img src="#" alt="Vine" data-url="#" data-win-bind="src: posterUrl" 
-                        style="width:90%; height: 107.37%; margin: 10px;" />
+                         style="width:90%; height: 107.37%; margin: 10px;" />
                 </div>
             </div>
 
             <section aria-label="Main content" role="main" style="height: 640px; width: 1035px; margin-top: 115px; margin-bottom: 13px; -ms-grid-row-span: 2;">
+                <div id="problem-reporter">
+                </div>
                 <div id="featured-videos" 
                      data-win-control="WinJS.UI.ListView"
                      data-win-options="{itemDataSource : ViewModels.vines.dataSource,

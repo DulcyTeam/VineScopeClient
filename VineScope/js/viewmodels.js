@@ -26,13 +26,20 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
     var loadVines = function () {
         var vinesDTOs = Data.getVines().then(function (vinesDTOs) {
             vinesList.splice(0, vinesList.length);
-            if (!vinesDTOs) {
-                return;
-            }
 
             for (var i = 0; i < vinesDTOs.length; i++) {
                 vinesList.push(vinesDTOs[i]);
             }
+        }, function error(response) {
+            //var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
+            //errorMessage.showAsync();
+            var problemContainer = document.getElementById("problem-reporter");
+            var h2 = document.createElement("h2");
+            h2.innerText = "Something happened, there is a problem with the connection";
+            var img = document.createElement("img");
+            img.src = "../../images/sad-panda.png";
+            problemContainer.appendChild(h2);
+            problemContainer.appendChild(img);
         }).done();
     }
 

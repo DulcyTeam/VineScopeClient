@@ -51,6 +51,12 @@
         // complete an asynchronous operation before your application is 
         // suspended, call args.setPromise().
         app.sessionState.history = nav.history;
+        var vineUrl = ViewModels.vine.url;
+        vineUrl = vineUrl.substring(vineUrl.lastIndexOf("/") + 1)
+
+        if (vineUrl != "") {
+            app.sessionState.lastVineUrl = vineUrl;
+        }
     };
 
     app.start();
