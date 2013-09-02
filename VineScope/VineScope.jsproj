@@ -55,6 +55,8 @@
     </AppxManifest>
     <Content Include="css\default.css" />
     <Content Include="images\logo.png" />
+    <Content Include="images\next-btn.png" />
+    <Content Include="images\prev-btn.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
