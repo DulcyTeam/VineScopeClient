@@ -24,9 +24,10 @@
                 </h1>
             </header>
             <section aria-label="Main content" role="main">
-                <video id="player" poster="#" data-win-bind="poster: vine.posterUrl; src: vine.videoUrl" controls="controls">
-                   
+                <button id="prev"> Previous Vine</button>
+                <video id="vine-player" poster="#" data-win-bind="poster: vine.posterUrl; src: vine.videoUrl" controls="controls">
                 </video>
+                <button id="next">Next Vine</button>
                 <span id="author" 
                       style="position: relative; 
                       left: 123px; top: 12px;" data-win-bind="innerText: vine.author"> Somebody name </span>

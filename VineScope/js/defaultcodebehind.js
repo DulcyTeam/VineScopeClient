@@ -5,7 +5,12 @@
     var goToRandomVine = function () {
         var vine = Data.getRandomVine().then(
             function (vine) {
-                WinJS.Navigation.navigate("/pages/video/video.html", vine)
+                var currentPage = WinJS.Navigation.location
+                if (currentPage) {
+                    WinJS.Navigation.navigate("/pages/video/video.html", vine)
+                } else {
+    
+                }
             });
     }
 

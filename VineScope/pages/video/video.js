@@ -26,11 +26,12 @@
 
             var downloadButton = document.getElementById("download-vine-bnt");
             downloadButton.addEventListener("click", downloadVineOnClick);
-            WinJS.Binding.processAll(element, ViewModels);
 
-            player.onclick = function () {
-                
-            }
+            var prevButton = document.getElementById("prev");
+            prevButton.addEventListener("click", goPrev);
+
+            var nextButton = document.getElementById("next");
+            nextButton.addEventListener("click", goNext);
         },
 
         unload: function () {
@@ -42,8 +43,18 @@
         }
     });
 
+    function goPrev() {
+        var prevVineUrl = ViewModels.vine.previousVineUrl;
+        ViewModels.loadVine(prevVineUrl);
+    }
+
+    function goNext() {
+        var nextVineUrl = ViewModels.vine.previousVineUrl;
+        ViewModels.loadVine(nextVineUrl);
+    }
+
     function downloadVineOnClick() {
-        var vineUrl = document.getElementById("vine-source").src;
+        var vineUrl = document.getElementById("vine-player").src;
         console.log(vineUrl);
         var currentState = Windows.UI.ViewManagement.ApplicationView.value;
 
