@@ -12,28 +12,31 @@
 
         ready: function (element, options) {
             // TODO: Initialize the page here.
-            var vine = {};
+            var vine;
+<<<<<<< HEAD
 
             if (options.indexInVinesList >= 0) {
+=======
+            if (options.indexInVinesList>=0) {
+>>>>>>> origin/master
                 var vineIndex = options.indexInVinesList;
                 vine = ViewModels.vines.getAt(vineIndex);
-            } else {
+            }
+            else {
                 vine = options;
             }
 
             ViewModels.loadVine(vine.url);
             WinJS.Binding.processAll(element, ViewModels);
-
             var downloadButton = document.getElementById("download-vine-bnt");
             downloadButton.addEventListener("click", downloadVineOnClick);
-            WinJS.Binding.processAll(element, ViewModels);
-
-            player.onclick = function () {
-                
-            }
         },
 
         unload: function () {
+<<<<<<< HEAD
+=======
+            // ViewModels.vine = ViewModels.vineModel();
+>>>>>>> origin/master
         },
 
         updateLayout: function (element, viewState, lastViewState) {
@@ -71,8 +74,7 @@
                     });
                 }, function () {
                     var failMessage = new Windows.UI.Popups.MessageDialog("Download failed.");
-                    failMessage.showAsync();
-                    file.deleteAsync();
+                    failMessage.showAsync()
                 }).done();
             }
             else {

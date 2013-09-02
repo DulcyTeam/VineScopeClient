@@ -24,14 +24,14 @@
                 </h1>
             </header>
             <section aria-label="Main content" role="main">
-                <video id="player" poster="#" data-win-bind="poster: vine.posterUrl" controls="controls">
-                    <source src="file.mp4" data-win-bind="src: vine.videoUrl" type="video/mp4" />
+                <video id="player" poster="#" data-win-bind="poster: vine.posterUrl; src: vine.videoUrl" controls="controls">
+                   
                 </video>
                 <span id="author" 
                       style="position: relative; 
                       left: 123px; top: 12px;" data-win-bind="innerText: vine.author"> Somebody name </span>
+                <button id="download-vine-bnt">Download Vine</button>
             </section>
         </div>
-        <button type="button" style="position: relative; width: 90px; height: 32px; left: 216px; top: 9px;">Download</button><span style="width: 209.44px; height: 138px;"></span>
     </body>
 </html>
