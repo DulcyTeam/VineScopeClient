@@ -27,6 +27,10 @@
             var downloadButton = document.getElementById("download-vine-bnt");
             downloadButton.addEventListener("click", downloadVineOnClick);
             WinJS.Binding.processAll(element, ViewModels);
+
+            player.onclick = function () {
+                
+            }
         },
 
         unload: function () {

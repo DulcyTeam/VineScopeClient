@@ -8,7 +8,7 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
     var vinesList = new WinJS.Binding.List([]);
     var searchResults = new WinJS.Binding.List([]);
 
-    var vineModel = function () {
+    var vineViewModel = function () {
         return WinJS.Binding.as({
             previousVineUrl: "",
             nextVineUrl: "",
@@ -21,7 +21,7 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
         })
     }
 
-    var vine = vineModel();
+    var vine = vineViewModel();
 
     var loadVines = function () {
         var vinesDTOs = Data.getVines().then(function (vinesDTOs) {
