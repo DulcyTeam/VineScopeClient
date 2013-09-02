@@ -26,6 +26,9 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
     var loadVines = function () {
         var vinesDTOs = Data.getVines().then(function (vinesDTOs) {
             vinesList.splice(0, vinesList.length);
+            if (!vinesDTOs) {
+                return;
+            }
 
             for (var i = 0; i < vinesDTOs.length; i++) {
                 vinesList.push(vinesDTOs[i]);
@@ -53,6 +56,10 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
 
         var vinesDTOs = Data.searchVines(queryString).then(function (vinesDTOs) {
             vinesList.splice(0, vinesList.length);
+
+            if (!vinesDTOs) {
+                return;
+            }
 
             for (var i = 0; i < vinesDTOs.length; i++) {
                 var vineDTO = vinesDTOs[i];
