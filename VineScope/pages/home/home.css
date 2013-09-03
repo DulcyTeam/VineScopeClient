@@ -1,6 +1,48 @@
-﻿.homepage section[role=main] {
+﻿/*.homepage section[role=main] {
     margin-left: 120px;
     margin-right: 211px;
+}*/
+
+#banner {
+    margin: 10px -4px 630px 4px;
+    -ms-grid-row-span: 2;
+}
+
+    #banner > h1 > span {
+        position: relative;
+        margin-left: 186px;
+        margin-top: -9.24px;
+    }
+
+#vineContainer {
+    width: 223px;
+    height: 184px;
+    margin-top: 0px;
+    margin-right: 0%;
+    margin-left: 0px;
+    padding-top: 0px;
+}
+
+    #vineContainer > img {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+
+#mainContent {
+    height: 640px;
+    width: 1035px;
+    margin-top: 115px;
+    margin-bottom: 13px;
+    -ms-grid-row-span: 2;
+    position: relative;
+}
+
+#featured-videos {
+    height: 585px;
+    left: 187px;
+    top: 20px;
+    width: 703px;
 }
 
 @media screen and (-ms-view-state: snapped) {

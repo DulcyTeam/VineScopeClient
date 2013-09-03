@@ -31,6 +31,7 @@
                 vinesList.push(vinesDTOs[i]);
             }
         }, function error() {
+
             var problemContainer = document.getElementById("problem-reporter");
             var h2 = document.createElement("h2");
             h2.innerText = "Something happened, there is a problem with the connection";
@@ -63,7 +64,7 @@
         searchQuery.queryText = queryString;
 
         var vinesDTOs = Data.searchVines(queryString).then(function (vinesDTOs) {
-            vinesList.splice(0, vinesList.length);
+            searchResults.splice(0, searchResults.length);
 
             if (!vinesDTOs) {
                 return;
@@ -71,7 +72,7 @@
 
             for (var i = 0; i < vinesDTOs.length; i++) {
                 var vineDTO = vinesDTOs[i];
-                vinesList.push(vineDTO);
+                searchResults.push(vineDTO);
             }
         }, function error() {
             var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
