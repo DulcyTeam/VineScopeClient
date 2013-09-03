@@ -1,4 +1,8 @@
-﻿#contenthost {
+﻿body {
+    background: url(../images/background.png);
+}
+
+#contenthost {
     height: 100%;
     width: 100%;
 }

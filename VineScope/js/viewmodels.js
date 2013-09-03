@@ -36,7 +36,7 @@
             var h2 = document.createElement("h2");
             h2.innerText = "Something happened, there is a problem with the connection";
             var img = document.createElement("img");
-            img.src = "../../images/sad-gooby.png";
+            img.src = "../../images/sad-panda.png";
             problemContainer.appendChild(h2);
             problemContainer.appendChild(img);
         }).done();
