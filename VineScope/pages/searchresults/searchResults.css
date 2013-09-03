@@ -1,27 +1,31 @@
-﻿.win-listview 
-{
-    width: 90%; 
+﻿.searchresults .win-listview {
+    width: 90%;
     margin-top: 10%;
     margin-left: 8%;
 }
 
-    .win-listview .win-viewport.win-vertical {
+    .searchresults .win-listview .win-viewport.win-vertical {
         margin: 0px;
     }
-#searchedVideo {
-    width:230px;
-    height:230px;
+
+.searchresults #searchedVideo {
+    width: 230px;
+    height: 230px;
 }
 
-#item {
-    padding-top:50px;
+.searchresults #item {
+    padding-top: 50px;
 }
 
-h3 {
+.searchresults h3 {
     text-overflow: ellipsis;
-    height:20px;
+    height: 20px;
 }
 
-/*#resultsContainer .win-vertical {
-    margin-left: 0px; 
-}*/ 
+.searchresults header {
+    margin-top: 5%;
+}
+
+.searchresults #resultsContainer .win-container:hover {
+    outline: 1px solid white;
+}
