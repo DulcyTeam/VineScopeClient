@@ -1,6 +1,5 @@
-﻿.searchresults .win-listview 
-{
-    width: 90%; 
+﻿.searchresults .win-listview {
+    width: 90%;
     margin-top: 10%;
     margin-left: 8%;
 }
@@ -8,22 +7,25 @@
     .searchresults .win-listview .win-viewport.win-vertical {
         margin: 0px;
     }
+
 .searchresults #searchedVideo {
-    width:230px;
-    height:230px;
+    width: 230px;
+    height: 230px;
 }
 
 .searchresults #item {
-    padding-top:50px;
+    padding-top: 50px;
 }
 
 .searchresults h3 {
     text-overflow: ellipsis;
-    height:20px;
+    height: 20px;
 }
 
 .searchresults header {
     margin-top: 5%;
 }
 
-
+.searchresults #resultsContainer .win-container:hover {
+    outline: 1px solid white;
+}
