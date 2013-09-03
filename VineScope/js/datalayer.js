@@ -33,9 +33,6 @@
             var jsonResponse = response.responseText;
             vine = JSON.parse(jsonResponse);
             return vine;
-        }, function error(response) {
-            var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
-            errorMessage.showAsync()
         });
     }
 
@@ -46,9 +43,6 @@
             var jsonResponse = response.responseText;
             vine = JSON.parse(jsonResponse);
             return vine;
-        }, function error(response) {
-            var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
-            errorMessage.showAsync()
         });
     };
 
@@ -57,6 +51,5 @@
         getVine: getVine,
         searchVines: searchVines,
         getRandomVine: getRandomVine,
-        //lastVineUrl: lastVineUrl
     });
 })()

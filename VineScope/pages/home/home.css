@@ -16,3 +16,12 @@
         margin-right: 100px;
     }
 }
+
+#problem-reporter {
+    text-align: center;
+    padding-top: 30px;
+}
+
+    #problem-reporter > h2, #problem-reporter > img {
+        margin-top: 50px;
+    }

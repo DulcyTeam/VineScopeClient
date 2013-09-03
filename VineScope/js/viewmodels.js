@@ -1,9 +1,9 @@
 ﻿/// <reference path="//Microsoft.WinJS.1.0/js/ui.js" />
 
-var url = "http://vinescopecustomservices.apphb.com/api/vines/";
-
 (function () {
     "use strict";
+
+    var url = "http://vinescopecustomservices.apphb.com/api/vines/";
 
     var vinesList = new WinJS.Binding.List([]);
     var searchResults = new WinJS.Binding.List([]);
@@ -30,14 +30,12 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
             for (var i = 0; i < vinesDTOs.length; i++) {
                 vinesList.push(vinesDTOs[i]);
             }
-        }, function error(response) {
-            //var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
-            //errorMessage.showAsync();
+        }, function error() {
             var problemContainer = document.getElementById("problem-reporter");
             var h2 = document.createElement("h2");
             h2.innerText = "Something happened, there is a problem with the connection";
             var img = document.createElement("img");
-            img.src = "../../images/sad-panda.png";
+            img.src = "../../images/sad-gooby.png";
             problemContainer.appendChild(h2);
             problemContainer.appendChild(img);
         }).done();
@@ -53,7 +51,10 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
             vine.url = vineDTO.url;
             vine.posterUrl = vineDTO.posterUrl;
             vine.author = vineDTO.author;
-        }).done();
+        }, function error() {
+            var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
+            errorMessage.showAsync()
+        });
     }
 
     var searchQuery = WinJS.Binding.as({ queryText: ""});
@@ -72,6 +73,9 @@ var url = "http://vinescopecustomservices.apphb.com/api/vines/";
                 var vineDTO = vinesDTOs[i];
                 vinesList.push(vineDTO);
             }
+        }, function error() {
+            var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
+            errorMessage.showAsync()
         });
     }
 
