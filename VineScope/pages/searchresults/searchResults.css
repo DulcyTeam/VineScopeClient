@@ -22,6 +22,8 @@
     height:20px;
 }
 
-/*#resultsContainer .win-vertical {
-    margin-left: 0px; 
-}*/ 
+.searchresults header {
+    margin-top: 5%;
+}
+
+
