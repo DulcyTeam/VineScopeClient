@@ -15,6 +15,7 @@
 
 .searchresults #item {
     padding-top: 50px;
+    
 }
 
 .searchresults h3 {
@@ -24,6 +25,10 @@
 
 .searchresults header {
     margin-top: 5%;
+}
+
+.searchresults #resultsContainer .win-container {
+    background-color:transparent;
 }
 
 .searchresults #resultsContainer .win-container:hover {
