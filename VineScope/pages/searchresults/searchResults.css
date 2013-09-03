@@ -1,23 +1,23 @@
-﻿.win-listview 
+﻿.searchresults .win-listview 
 {
     width: 90%; 
     margin-top: 10%;
     margin-left: 8%;
 }
 
-    .win-listview .win-viewport.win-vertical {
+    .searchresults .win-listview .win-viewport.win-vertical {
         margin: 0px;
     }
-#searchedVideo {
+.searchresults #searchedVideo {
     width:230px;
     height:230px;
 }
 
-#item {
+.searchresults #item {
     padding-top:50px;
 }
 
-h3 {
+.searchresults h3 {
     text-overflow: ellipsis;
     height:20px;
 }
