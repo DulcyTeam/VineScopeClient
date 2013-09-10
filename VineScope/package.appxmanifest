@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="VineScope" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="VineScope" ForegroundText="light" BackgroundColor="#00A478">
+      <VisualElements DisplayName="Vine Scope" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="VineScope" ForegroundText="light" BackgroundColor="#00A478">
         <DefaultTile ShowName="allLogos" ShortName="Vine Scope" />
         <SplashScreen Image="images\splashscreen.png" />
       </VisualElements>
