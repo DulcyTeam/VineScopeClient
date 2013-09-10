@@ -62,6 +62,7 @@
     <Content Include="images\sad-gooby.png" />
     <Content Include="images\sad-panda.png" />
     <Content Include="images\smalllogo.png" />
+    <Content Include="images\snapped.png" />
     <Content Include="images\splashscreen.scale-100.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\datalayer.js" />

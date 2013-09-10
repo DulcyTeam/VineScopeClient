@@ -42,6 +42,8 @@
             WinJS.Utilities.id("cmdRandom").listen("click", function () {
                 DefaultCodeBehind.goToRandomVine();
             });
+
+            window.addEventListener('resize', DefaultCodeBehind.onResize, false);
         }
     });
 

@@ -21,14 +21,20 @@
     <script src="/js/navigator.js"></script>
 </head>
 <body>
-    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+    <div id="contenthost" 
+        data-win-control="Application.PageControlNavigator" 
+        data-win-options="{home: '/pages/home/home.html'}">
+    </div>
     <div id="appBar" data-win-control="WinJS.UI.AppBar" data-win-options="">
-         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id: 'cmdHome', label:'Home',
-            icon: 'home', section:'global',tooltip:'Go to homepage'}"></button>
+         <button data-win-control="WinJS.UI.AppBarCommand" 
+             data-win-options="{id: 'cmdHome', label:'Home', 
+             icon: 'home', section:'global',tooltip:'Go to homepage'}">
+         </button>
         <hr data-win-control="WinJS.UI.AppBarCommand" data-win-options="{type:'separator',section:'global'}" />
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRandom',label:'Get random vine'
             ,icon:'shuffle',section:'global',tooltip:'Shuffle'}">
         </button>
     </div>
+    <img id="snapped" src="images/snapped.png" />
 </body>
 </html>

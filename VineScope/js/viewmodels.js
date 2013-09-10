@@ -64,7 +64,7 @@
         searchQuery.queryText = queryString;
 
         var vinesDTOs = Data.searchVines(queryString).then(function (vinesDTOs) {
-            searchResults.splice(0, searchResults.length);
+            vinesList.splice(0, vinesList.length);
 
             if (!vinesDTOs) {
                 return;
@@ -72,7 +72,7 @@
 
             for (var i = 0; i < vinesDTOs.length; i++) {
                 var vineDTO = vinesDTOs[i];
-                searchResults.push(vineDTO);
+                vinesList.push(vineDTO);
             }
         }, function error() {
             var errorMessage = new Windows.UI.Popups.MessageDialog("No connection with server");
